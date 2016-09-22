@@ -31,7 +31,8 @@ foreach ($folder in $folders)
     foreach ($subfolder in $folders2)
     {
         $fullname = $subfolder.fullname
-        #Write-Verbose -Message $subfolder.name -Verbose
+        
+        # Change "-Verbose" below to "-WhatIf" to simulate what it will delete when running. (will not actually delete anything)
         Remove-Item -Recurse -Force -Verbose $fullname
     }
 }
